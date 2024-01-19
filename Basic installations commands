@@ -1,0 +1,22 @@
+Need to visit https://minikube.sigs.k8s.io/docs/start/
+
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+
+Install docker
+
+docker system prune
+
+minikube delete
+
+minikube start --driver=docker
+
+sudo usermod -aG docker $USER && newgrp docker
+
+kubectl get po -A
+sudo snap install kubectl
+sudo snap install kubectl --classic
+kubectl get po -A
+minikube status
+kubectl get node
